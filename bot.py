@@ -2,6 +2,8 @@ import telebot
 import requests
 from io import BytesIO
 import concurrent.futures
+import requests
+from my_site import keep_alive
 
 TOKEN = "7354603386:AAGoT1hrPwjoAd_s_XSgvFvQx8CjeWJdb1o"
 CHAT_ID = 123456789  # ID твоего чата или юзера
@@ -69,4 +71,5 @@ def send_welcome(message):
     id_ = bot.reply_to(message, """Начинаю сбор файлов...📥""").id
     main(chat_id=message.chat.id, id_=id_)
 
+keep_alive()
 bot.infinity_polling(skip_pending=True)
