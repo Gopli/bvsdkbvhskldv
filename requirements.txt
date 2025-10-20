@@ -2,3 +2,4 @@ requests
 pyTelegramBotAPI 
 fastapi[all]
 uvicorn
+fastapi
